@@ -109,7 +109,6 @@ namespace PromoCodeFactory.DataAccess.Data
                 PartnerManager =  Employees.FirstOrDefault(x => x.FirstName == "Иван"),
                 Preference= Preferences.FirstOrDefault(x => x.Name == "Театр"),
                 //Customer=Customers.FirstOrDefault(x => x.LastName == "Петров"),
-
             },
             
         };

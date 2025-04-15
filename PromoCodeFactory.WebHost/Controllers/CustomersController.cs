@@ -104,8 +104,7 @@ namespace PromoCodeFactory.WebHost.Controllers
         {
             //+TODO: Добавить создание нового клиента вместе с его предпочтениями
             //throw new NotImplementedException();
-
-            //var preferences = await _preferenceRepository.GetAllPrefAsync();
+                        
             var preferences = await _preferenceRepository.GetAllAsync();
 
             List<Preference> CustomerPreferences = new List<Preference> 
@@ -145,7 +144,6 @@ namespace PromoCodeFactory.WebHost.Controllers
             //+TODO: Обновить данные клиента вместе с его предпочтениями
             //throw new NotImplementedException();
             var customer = await _customerRepository.GetByIdAsync(id);
-            //var preferences = await _preferenceRepository.GetAllPrefAsync();
             var preferences = await _preferenceRepository.GetAllAsync();
 
             if (customer == null)
@@ -178,7 +176,7 @@ namespace PromoCodeFactory.WebHost.Controllers
         [HttpDelete]
         public async Task<IActionResult> DeleteCustomer(Guid id)
         {
-            //TODO: Удаление клиента вместе с выданными ему промокодами
+            //+TODO: Удаление клиента вместе с выданными ему промокодами
             //throw new NotImplementedException();
             var customer = await _customerRepository.GetByIdAsync(id);
             _customerRepository.DelAsync(id);
